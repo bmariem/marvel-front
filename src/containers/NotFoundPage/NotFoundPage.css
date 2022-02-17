@@ -46,25 +46,6 @@
   font-size: 18px;
 }
 
-.NotFoundPage .NotFoundPage-content button {
-  background-color: transparent;
-  color: #000;
-  text-transform: uppercase;
-  border-radius: 0;
-  border: 1px solid #000;
-  cursor: pointer;
-  display: inline-block;
-  font-weight: 700;
-  margin: 15px auto;
-  overflow: hidden;
-  padding: 15px;
-}
-.NotFoundPage .NotFoundPage-content button:hover {
-  color: #fff;
-  background-color: #e62429;
-  opacity: 0.9;
-  border: 1px solid #e62429;
-}
 .NotFoundPage .NotFoundPage-visual {
   max-width: 400px;
 }

@@ -7,3 +7,24 @@ body {
 * {
   box-sizing: border-box;
 }
+
+.btn {
+  background-color: transparent;
+  color: #000;
+  text-transform: uppercase;
+  border-radius: 0;
+  border: 1px solid #000;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 700;
+  margin: 15px auto;
+  overflow: hidden;
+  padding: 15px;
+}
+
+.btn:hover {
+  color: #fff;
+  background-color: #e62429;
+  opacity: 0.9;
+  border: 1px solid #e62429;
+}

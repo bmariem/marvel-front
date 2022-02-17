@@ -12,14 +12,14 @@ import Card from "../../components/Card/Card";
 import "react-multi-carousel/lib/styles.css";
 import "./Character.css";
 
-const Character = () => {
+const Character = ({ token }) => {
   // the id of the Character sent during navigation
   const { id } = useParams();
 
   // STATES
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
-
+  const [favorites, setFavorites] = useState([]);
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
@@ -52,6 +52,47 @@ const Character = () => {
     fetchData();
   }, [id]);
 
+  const handleAddFavorite = async () => {
+    if (token) {
+      try {
+        const response = await axios.post(
+          `/user/favorites`,
+          {
+            id: data._id,
+            type: "character",
+          },
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
+        setFavorites(response.data.favorites.favoriteCharacters);
+      } catch (error) {
+        console.log(error.message);
+      }
+    }
+  };
+
+  useEffect(() => {
+    if (token) {
+      const fetchData = async () => {
+        try {
+          const response = await axios.get(`/user/favorites`, {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          });
+          setFavorites(response.data.favorites.favoriteCharacters);
+        } catch (error) {
+          console.log(error.message);
+        }
+      };
+
+      fetchData();
+    }
+  }, [setFavorites, token]);
+
   return isLoading ? (
     <Spinner />
   ) : (
@@ -66,6 +107,11 @@ const Character = () => {
               {data.description}
             </p>
           )}
+          {token && favorites && (
+            <button className="btn" onClick={handleAddFavorite}>
+              Make it my favorite
+            </button>
+          )}
         </div>
         {data.thumbnail.path && (
           <img
@@ -77,7 +123,9 @@ const Character = () => {
       </div>
 
       <div className="container">
-        <h3 className="character-main-page-title">Comics</h3>
+        {data.comics.length > 0 && (
+          <h3 className="character-main-page-title">Comics</h3>
+        )}
         <div className="character-main-page-carousel">
           <Carousel
             responsive={responsive}

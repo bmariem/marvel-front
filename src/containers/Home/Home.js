@@ -44,6 +44,14 @@ const Home = () => {
   ) : (
     <div className="characters-main">
       <div className="container">
+        <div className="cards">
+          {/* Get all characters */}
+          {data.results.map((character) => {
+            return <CharacterCard character={character} key={character._id} />;
+          })}
+        </div>
+      </div>
+      <div className="container">
         <div className="home-pagination">
           <ReactPaginate
             previousLabel={"<"}
@@ -54,14 +62,6 @@ const Home = () => {
             containerClassName={"pagination"}
             activeClassName={"active"}
           />
-        </div>
-      </div>
-      <div className="container">
-        <div className="cards">
-          {/* Get all characters */}
-          {data.results.map((character) => {
-            return <CharacterCard character={character} key={character._id} />;
-          })}
         </div>
       </div>
     </div>

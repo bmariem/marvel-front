@@ -1,0 +1,67 @@
+.login > .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.login .title {
+  font-family: "Roboto", sans-serif;
+  margin: 1.5rem 0 1rem;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.login-form {
+  display: flex;
+  padding: 1rem;
+  width: 350px;
+  margin: auto;
+  flex-direction: column;
+  border: 1px solid #f4f4f4;
+  border-radius: 5px;
+}
+
+.login-form input {
+  border: none;
+  border-bottom: 1px solid #000;
+  height: 35px;
+  margin-bottom: 20px;
+}
+
+.login-form input:focus-visible {
+  outline: auto 1px #000;
+}
+
+.login-form input::placeholder {
+  color: #cbcccd;
+  font-size: 18px;
+}
+
+.login .container .error-message {
+  color: #e62429;
+  font-size: 15px;
+  padding: 1rem 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.login-form .btn {
+  font-family: "Roboto", sans-serif;
+  background-color: #000;
+  height: 45px;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.login .container .signup-link {
+  margin: 1rem 0;
+  color: #000;
+  font-size: 15px;
+  cursor: pointer;
+}

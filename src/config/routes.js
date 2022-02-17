@@ -3,6 +3,7 @@ const routes = {
   COMICS: "/comics",
   COMIC: "/comic/:id",
   CHARACTER: "/character/:id",
+  FAVORITES: "/favorites",
   NOTFOUNDPAGE: "*",
 };
 

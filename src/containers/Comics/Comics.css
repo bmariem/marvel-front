@@ -54,3 +54,49 @@
   flex-wrap: wrap;
   gap: 10px;
 }
+
+.Home .home-pagination {
+  max-width: 1280px;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.Home .home-pagination .pagination {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  margin-bottom: 2rem;
+  border: 1px solid #f4f4f4;
+  border-radius: 5px;
+}
+
+.Home .home-pagination .pagination li {
+  width: 48px;
+  padding: 16px 0;
+  margin: 0;
+  text-align: center;
+  list-style: none;
+  cursor: pointer;
+  justify-content: center;
+}
+
+.Home .home-pagination .pagination li a {
+  color: rgb(153, 153, 153);
+}
+
+.Home .home-pagination .pagination li.active {
+  background-color: rgba(17, 17, 17, 0.04);
+}
+
+.Home .home-pagination .pagination li.active a {
+  outline: 0;
+  color: rgb(237 29 36);
+  padding: 16px;
+}
+
+.Home .home-pagination .pagination li.previous.disabled,
+.Home .home-pagination .pagination li.next.disabled {
+  display: none;
+}

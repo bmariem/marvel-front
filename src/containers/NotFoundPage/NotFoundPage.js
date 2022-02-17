@@ -20,6 +20,7 @@ const NotFoundPage = () => {
             page or try using our site search to find something specific.
           </p>
           <button
+            className="btn"
             onClick={() => {
               navigate("/");
             }}
