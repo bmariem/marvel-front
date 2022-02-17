@@ -23,11 +23,11 @@ const Character = () => {
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
-      items: 5,
+      items: 8,
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 3,
+      items: 6,
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
@@ -43,7 +43,7 @@ const Character = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(`/character/${id}`);
-
+        console.log(" character ====>", response.data);
         setData(response.data);
         setIsLoading(false);
       } catch (error) {
@@ -78,18 +78,16 @@ const Character = () => {
       </div>
 
       <div className="container">
-        {console.log(data)}
+        {console.log(" liste des comics dans une character ====>", data.comics)}
         <h3 className="character-main-page-title">Comics</h3>
-        <div>
+        <div style={{ width: "100%" }}>
           <Carousel
             responsive={responsive}
             infinite={true}
             autoPlaySpeed={1000}
             customTransition="all .5"
-            showDots={true}
           >
             {data.comics.map((comic) => {
-              console.log(comic); // id of each comic
               return <Card comic={comic} key={comic._id}></Card>;
             })}
           </Carousel>

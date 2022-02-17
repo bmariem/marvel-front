@@ -9,7 +9,7 @@
   max-width: 1200px;
   margin: 50px auto;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .character-main-page-name {
@@ -50,16 +50,33 @@
   transition: all 0.17s ease-in-out;
 }
 
-.character-main-page .container:last-of-type {
+.character-main-page .container:nth-of-type(2) {
   justify-content: flex-start;
+  flex-direction: column;
 }
 
 .character-main-page-title {
   color: #000;
   text-align: left;
   white-space: normal;
-  margin: 0 0 40px;
+  margin: 0 0 30px;
   font-family: "Roboto", sans-serif;
   font-size: 22px;
   font-weight: bold;
+}
+
+.character-main-page .comic-card {
+  height: auto;
+}
+
+.character-main-page .comic-card .comic-card-title {
+  text-align: center;
+}
+
+.character-main-page .comic-card .comic-card-visual {
+  width: 150px;
+}
+
+.react-multiple-carousel__arrow {
+  background: rgb(241 20 30);
 }
