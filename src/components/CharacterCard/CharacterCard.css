@@ -1,0 +1,38 @@
+.character-card {
+  display: flex;
+  vertical-align: top;
+  flex-direction: column;
+  transition: 0.5s ease;
+  flex: 18% 1;
+  align-items: center;
+  text-decoration: none;
+  height: 360px;
+}
+
+.character-card:hover .character-card-visual {
+  opacity: 0.9;
+  box-shadow: rgb(100 100 111 / 20%) 4px 15px 18px 5px;
+  background: transparent;
+  transform: translate3d(0, -2%, 0);
+  transition: all 0.17s ease-in-out;
+}
+
+.character-card .character-card-title {
+  color: #000;
+  white-space: normal;
+  padding: 0 0 10px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  margin: 10px 0 0;
+  font-weight: bold;
+}
+
+.character-card:hover .character-card-title {
+  color: #e62429;
+}
+
+.character-card .character-card-visual {
+  height: 100%;
+  width: 200px;
+  object-fit: cover;
+}
