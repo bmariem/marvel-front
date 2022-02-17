@@ -43,7 +43,6 @@ const Character = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(`/character/${id}`);
-        console.log(" character ====>", response.data);
         setData(response.data);
         setIsLoading(false);
       } catch (error) {
@@ -78,11 +77,11 @@ const Character = () => {
       </div>
 
       <div className="container">
-        {console.log(" liste des comics dans une character ====>", data.comics)}
         <h3 className="character-main-page-title">Comics</h3>
-        <div style={{ width: "100%" }}>
+        <div className="character-main-page-carousel">
           <Carousel
             responsive={responsive}
+            autoPlay={true}
             infinite={true}
             autoPlaySpeed={1000}
             customTransition="all .5"

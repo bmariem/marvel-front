@@ -65,6 +65,10 @@
   font-weight: bold;
 }
 
+.character-main-page-carousel {
+  width: 100%;
+}
+
 .character-main-page .comic-card {
   height: auto;
 }
