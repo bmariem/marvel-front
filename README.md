@@ -9,9 +9,9 @@ You can also [click here](https://github.com/bmariem/marvel) to go to the back-e
 ✔️ A route of **comics list**, accepting parameters of filters and pagination;<br>
 ✔️ Input to **search** by comic name;<br>
 ✔️ A route of **characters** and **character details**, taking the character id as a parameter;<br>
-✔️ Clicking on a character or comic displays a **page with details** (name, description and comics infos if it is a character) 
-✔️ **Authentication system** by email and password
-✔️ Save **favorites comics & characters** in favorites page for a logged user
+✔️ Clicking on a character or comic displays a **page with details** (name, description and comics infos if it is a character);<br>
+✔️ **Authentication system** by email and password;<br>
+✔️ Save **favorites comics & characters** in favorites page for a logged user;<br>
 
 ## 👩‍💻 Technologies and tools used:
 
